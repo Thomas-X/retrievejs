@@ -1,3 +1,5 @@
+require("babel-core/register");
+import 'babel-polyfill'
 import { query } from './query';
 import { createApi} from './createApi';
 
