@@ -1,7 +1,7 @@
 # retrievejs
 A package for retrieving data in a nicely interpretive way. Uses [axios](https://www.npmjs.com/package/axios) under the hood.
 
-# quick usage
+## quick usage
 <br/>
 define your endpoints and create your api
 ```javascript
@@ -22,7 +22,7 @@ api.getMockData()
 ```
 
 ## the gist
-I got frustrated with constantly repeating myself so I made this package. Undoubtably there's better ones out there but this one works for me and fits to what I need.
+I got frustrated with constantly repeating myself during my exams so I made this package. Undoubtably there's better ones out there but this one works for me and fits to what I need.
 
 ## api
 
@@ -43,4 +43,10 @@ A factory that returns an object containing functions that do a request from sai
 parameters:
 * endpoints:
 <br/> -Your endpoints
+
+## todos:
+* Rewrite to Typescript and include definitions.
+* Write tests.
+* Redux integration.
+* Update documentation / api (using [TypeDoc](https://github.com/TypeStrong/typedoc))
 
