@@ -9,7 +9,7 @@ const endpoints = {
     getMockData: { path: 'http://www.mocky.io/v2/5aaa749a3300005d202da965', method: GET },
 };
 
-export const api = createApi(endpoints);
+export const api = createApi(endpoints);sc
 ```
 
 ## query an endpoint
