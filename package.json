@@ -1,6 +1,6 @@
 {
   "name": "retrievejs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A package for retrieving data in a nicely interpretive way.",
   "main": "lib/index.js",
   "scripts": {
