@@ -1,4 +1,13 @@
-.idea
-node_modules
-.babelrc
 src
+test
+tsconfig.json
+tsconfig.module.json
+tslint.json
+.travis.yml
+.github
+.prettierignore
+build/docs
+**/*.spec.*
+coverage
+.nyc_output
+*.log

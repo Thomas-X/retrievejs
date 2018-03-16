@@ -1,0 +1,41 @@
+{
+  "name": "retrievejs",
+  "version": "1.1.4",
+  "description": "A package for retrieving data in a nicely interpretive way.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomas-X/retrievejs.git"
+  },
+  "keywords": [
+    "react",
+    "api",
+    "network"
+  ],
+  "author": "Thomas-X",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thomas-X/retrievejs/issues"
+  },
+  "homepage": "https://github.com/Thomas-X/retrievejs#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "babel-polyfill": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^22.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
