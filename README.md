@@ -23,4 +23,4 @@ api.getMockData()
 ## the gist
 I got frustrated with constantly repeating myself during my exams so I made this package. Undoubtably there's better ones out there but this one works for me and fits to what I need.
 
-### [API](https://thomas-x.github.io/retrievejs/globals.html#delete)
+### [API](https://thomas-x.github.io/retrievejs/)
