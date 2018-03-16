@@ -4,7 +4,7 @@ A package for retrieving data in a nicely interpretive way.
 ## quick usage
 define your endpoints and create your api
 in `/api.js` per example
-```
+```js
 const endpoints = {
     getMockData: { path: 'http://www.mocky.io/v2/5aaa749a3300005d202da965', method: GET },
 };
@@ -14,7 +14,7 @@ export const api = createApi(endpoints);sc
 
 ## query an endpoint
 
-```
+```js
 api.getMockData()
   .then(response => { /*..*/ })
   .catch(error => { /*..*/ }); 
