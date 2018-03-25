@@ -1,7 +1,7 @@
 import { test } from 'ava';
 import { createApi } from '../createApi';
 import { combineReducers, createStore } from 'redux';
-import reducer from '../reducer';
+import { reducer } from '../reducer';
 
 test('creates api and does requests', async(t) => {
     const endpoints = {
