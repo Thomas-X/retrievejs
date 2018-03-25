@@ -1,5 +1,5 @@
 import test from 'ava';
-import { errorLog, normalLog, warnLog } from './log';
+import { errorLog, normalLog, warnLog } from '../log';
 
 test('if it logs to the console', t => {
     try {

@@ -7,8 +7,8 @@ import * as React from 'react';
 import { configure, mount } from 'enzyme';
 // @ts-ignore
 import Adapter from 'enzyme-adapter-react-16';
-import { createApi } from './createApi';
-import { query } from './query';
+import { createApi } from '../createApi';
+import { query } from '../query';
 // @ts-ignore
 configure({adapter: new Adapter()});
 

@@ -1,5 +1,5 @@
 import { test } from 'ava';
-import { createApi } from './createApi';
+import { createApi } from '../createApi';
 
 test('creates api and does requests', async(t) => {
     const endpoints = {
