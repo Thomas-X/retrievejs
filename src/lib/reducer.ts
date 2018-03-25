@@ -8,7 +8,7 @@ export type NetworkState = {
     readonly data: null | object
 }
 
-export default (api: ApiEndpoints) => {
+export const reducer = (api: ApiEndpoints) => {
     return (state: {} | NetworkState, action: AnyAction) => {
         const arr = action.type.split('/');
 
