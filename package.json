@@ -1,6 +1,6 @@
 {
   "name": "retrievejs",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "A package for retrieving data in a nicely interpretive way.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -59,8 +59,10 @@
     "@types/react-dom": "^16.0.4",
     "@types/sinon": "^4.3.0",
     "async": "^2.6.0",
+    "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "redux": "^3.7.2",
     "sinon": "^4.4.6"
   },
   "devDependencies": {
