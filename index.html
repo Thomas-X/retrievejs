@@ -66,6 +66,23 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="retrievejs">retrievejs</h1>
 				<p>A package for retrieving data in a nicely interpretive way.</p>
+				<h2 id="quick-usage">quick usage</h2>
+				<p>define your endpoints and create your api
+				in <code>/api.js</code> per example</p>
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> endpoints = {
+    <span class="hljs-attr">getMockData</span>: { <span class="hljs-attr">path</span>: <span class="hljs-string">'http://www.mocky.io/v2/5aaa749a3300005d202da965'</span>, <span class="hljs-attr">method</span>: GET },
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> api = createApi(endpoints);
+</code></pre>
+				<h2 id="query-an-endpoint">query an endpoint</h2>
+				<pre><code class="lang-js">api.getMockData()
+  .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> { <span class="hljs-comment">/*..*/</span> })
+  .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> { <span class="hljs-comment">/*..*/</span> }); 
+</code></pre>
+				<h2 id="the-gist">the gist</h2>
+				<p>I got frustrated with constantly repeating myself during my exams so I made this package. Undoubtably there&#39;s better ones out there but this one works for me and fits to what I need.</p>
+				<h3 id="api"><a href="https://thomas-x.github.io/retrievejs/">API</a></h3>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -116,6 +133,9 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#put" class="tsd-kind-icon">PUT</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#retrievejs_prefix_actions" class="tsd-kind-icon">RETRIEVEJS_<wbr>PREFIX_<wbr>ACTIONS</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#logprefix" class="tsd-kind-icon">log<wbr>Prefix</a>
