@@ -11,6 +11,9 @@ export const HEAD: string = 'head';
 export const OPTIONS: string = 'options';
 export const logPrefix: string = 'RETRIEVEJS: ';
 export const RETRIEVEJS_PREFIX_ACTIONS: string = 'retrievejs/api/';
+export const LOAD = 'load';
+export const SUCCESS = 'success';
+export const FAILED = 'failed';
 
 export interface ApiEndpoint {
     path: string,
@@ -59,7 +62,7 @@ export const createApi = (endpoints: ApiEndpoints, store: Store<any>, _axios?: A
     const baseFunction = (method: string, path: string, key: string, params?: object, config?: AxiosRequestConfig) => {
         const dispatchSuccess = (response: any) => {
             store.dispatch({
-                type: RETRIEVEJS_PREFIX_ACTIONS + key + '/success',
+                type: RETRIEVEJS_PREFIX_ACTIONS + key + `/${SUCCESS}`,
                 payload: {
                     isFetching: false,
                     failed: false,
@@ -69,7 +72,7 @@ export const createApi = (endpoints: ApiEndpoints, store: Store<any>, _axios?: A
         };
         const dispatchFailed = (error: any) => {
             store.dispatch({
-                type: RETRIEVEJS_PREFIX_ACTIONS + key + '/failed',
+                type: RETRIEVEJS_PREFIX_ACTIONS + key + `/${FAILED}`,
                 payload: {
                     isFetching: false,
                     failed: false,
@@ -79,7 +82,7 @@ export const createApi = (endpoints: ApiEndpoints, store: Store<any>, _axios?: A
         };
         const dispatchLoading = () => {
             store.dispatch({
-                type: RETRIEVEJS_PREFIX_ACTIONS + key + '/load',
+                type: RETRIEVEJS_PREFIX_ACTIONS + key + `/${LOAD}`,
                 payload: {
                     isFetching: true,
                     failed: false,
@@ -137,6 +140,7 @@ export const createApi = (endpoints: ApiEndpoints, store: Store<any>, _axios?: A
         if (!path || !method) {
             errorLog('Api config validation failed, missing path and/or method key, expect things to break.');
         }
+        // @ts-ignore
         obj[key] = async (params?, config?: AxiosRequestConfig) => {
             return baseFunction(method, path, key, params, config);
         };

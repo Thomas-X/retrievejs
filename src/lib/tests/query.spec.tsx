@@ -9,6 +9,7 @@ import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { createApi } from '../createApi';
 import { query } from '../query';
+import { createStore } from 'redux';
 // @ts-ignore
 configure({adapter: new Adapter()});
 
@@ -16,7 +17,8 @@ test('it queries', t => {
     const endpoints = {
         getMock: {path: 'http://www.mocky.io/v2/5aab93182e00004900138dd4', method: 'get'},
     };
-    const api = createApi(endpoints);
+    const store = createStore((state: any) => state);
+    const api = createApi(endpoints, store);
 
 
     const didMount = spy();
@@ -39,6 +41,6 @@ test('it queries', t => {
 
     const wrapper = mount(<MyComponent/>);
     t.is(didMount.callCount, 1);
-    //@ts-ignore
+    // @ts-ignore
     t.is(wrapper.find('Test').props().myRequest.isFetching, true);
 });
